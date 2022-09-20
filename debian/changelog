@@ -1,3 +1,17 @@
+pcre2 (10.34-7ubuntu0.1) focal-security; urgency=medium
+
+  * SECURITY UPDATE: out-of-bounds read in pcre2_jit_compile
+    - Fix a unicode property matching issue and an incorrect
+      value reading in JIT in src/pcre2_jit_compile.c and
+      src/pcre2_jit_test.c.
+    - Fix a recursions issue in JIT caused by duplicated
+      data transfers in src/pcre2_jit_compile.c and
+      src/pcre2_jit_test.c.
+    - CVE-2022-1586
+    - CVE-2022-1587 
+
+ -- David Fernandez Gonzalez <david.fernandezgonzalez@canonical.com>  Tue, 20 Sep 2022 12:46:40 +0200
+
 pcre2 (10.34-7) unstable; urgency=medium
 
   * Upstream patch to fix segfault in rspamd (Closes: #946221)
